@@ -1,0 +1,31 @@
+name: geopython2026
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - jupyter
+  - jupyterlab
+  - notebook
+  - ipykernel
+  - numpy>=1.26
+  - pandas>=2.0
+  - matplotlib>=3.8
+  - shapely>=2.0
+  - fiona>=1.9
+  - pyproj>=3.6
+  - geopandas>=1.0
+  - rasterio>=1.3
+  - gdal>=3.7
+  - scipy
+  - scikit-image
+  - contextily
+  - folium
+  - mapclassify
+  - osmnx>=1.9
+  - networkx
+  - pip
+  - pip:
+    - geemap
+    - earthengine-api
+    - ndvi2gif

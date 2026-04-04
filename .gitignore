@@ -1,0 +1,43 @@
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+*.so
+
+# Entornos
+.env
+.venv
+env/
+venv/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Datos grandes (añadir excepciones según necesidad)
+*.tif
+*.tiff
+*.img
+*.nc
+*.hdf
+*.h5
+
+# Credenciales GEE
+credentials
+service_account_key.json
