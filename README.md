@@ -27,44 +27,34 @@ Los notebooks de Colab incluyen una celda inicial con las instalaciones necesari
 
 ## Temario
 
-### Módulo 1 — Introducción a Python
-`notebooks/01_intro_python/`
+### Día 1 — Introducción a Python
+`notebooks/dia_1/`
 
-Entorno Jupyter, tipos de datos, estructuras de control, funciones, clases y módulos. Ejercicio final: Rock, Paper, Scissors, Lizard, Spock.
+Entorno Jupyter (local y Colab), tipos de datos, estructuras de control, funciones, manejo de errores, módulos y Programación Orientada a Objetos (clases y herencia). Ejercicio final: Rock, Paper, Scissors, Lizard, Spock.
 
-### Módulo 2 — Shapely: geometrías vectoriales
-`notebooks/02_shapely_geometrias/`
+### Día 2 — La pila vectorial: Shapely → Fiona → GeoPandas
+`notebooks/dia_2/`
 
-La base del análisis vectorial en Python. Puntos, líneas y polígonos. Operaciones espaciales (buffer, intersect, union, difference). Relaciones topológicas.
+Cómo se construyen las librerías vectoriales unas sobre otras. Shapely para geometrías y operaciones espaciales. Fiona para I/O vectorial sobre GDAL/OGR. GeoPandas para análisis vectorial de alto nivel: proyecciones, operaciones espaciales, joins atributales y espaciales, visualización.
 
-### Módulo 3 — Fiona y GeoPandas
-`notebooks/03_fiona_geopandas/`
+### Día 3 — La pila raster: GDAL → NumPy → Rasterio
+`notebooks/dia_3/`
 
-De Fiona (I/O vectorial sobre GDAL/OGR) a GeoPandas (análisis vectorial de alto nivel). Lectura/escritura de shapefiles y GeoPackage, proyecciones, operaciones espaciales, joins atributales y espaciales.
+De GDAL (la base C/C++) a Rasterio (API Pythónica sobre GDAL). NumPy para operaciones matriciales. Lectura/escritura de rasters, metadatos, reproyección, clips, enmascarado, álgebra de mapas, point sampling y estadísticas zonales.
 
-### Módulo 4 — GDAL y Rasterio
-`notebooks/04_gdal_rasterio/`
+### Día 4 — Teledetección aplicada: clase Landsat y ndvi2gif
+`notebooks/dia_4/`
 
-De GDAL (la base) a Rasterio (API Pythónica sobre GDAL). Lectura/escritura de rasters, metadatos, reproyección, formatos.
+Construcción de una clase Python para trabajar con imágenes Landsat. Composites estacionales y multíndice con ndvi2gif. Análisis de series temporales de reflectividad.
 
-### Módulo 5 — Análisis raster aplicado
-`notebooks/05_analisis_raster/`
+### Día 5 — Google Earth Engine, Geemap y OSMnx
+`notebooks/dia_5/`
 
-NumPy para operaciones matriciales. Clips, enmascarado, álgebra de mapas, point sampling, estadísticas zonales. Clase Landsat. Librería ndvi2gif.
-
-### Módulo 6 — Google Earth Engine y Geemap
-`notebooks/06_gee_geemap_ndvi2gif/`
-
-Introducción a GEE desde Python. Geemap como interfaz interactiva. Casos de uso: series temporales NDVI, visualización en mapas.
-
-### Módulo 7 — Análisis de redes con OSMnx
-`notebooks/07_osmx_redes/`
-
-Descarga de grafos viales desde OpenStreetMap. Análisis de redes: rutas óptimas, isocronas, estadísticas de red.
+Introducción a GEE desde Python. Geemap como interfaz interactiva: composites estacionales, visualización y exportación. Análisis de redes viales con OSMnx: descarga de grafos, rutas óptimas e isocronas.
 
 ## Datos
 
-Los datos de ejemplo están en `data/` e incluyen capas vectoriales de Canarias y Tenerife (shapefiles, GeoPackage, GeoJSON).
+Los datos de ejemplo están en `data/` e incluyen capas vectoriales de Canarias, Tenerife y el entorno de Doñana (shapefiles, GeoPackage, GeoJSON).
 
 ## Librerías principales
 
@@ -78,5 +68,5 @@ Los datos de ejemplo están en `data/` e incluyen capas vectoriales de Canarias 
 | matplotlib | 3.8 | Visualización |
 | geemap | 0.30 | Google Earth Engine |
 | osmnx | 1.9 | Redes viales |
-| ndvi2gif | — | Series temporales NDVI |
+| ndvi2gif | 1.1.0 | Composites estacionales (múltiples índices espectrales) |
 | jupyter | — | Entorno de trabajo |
