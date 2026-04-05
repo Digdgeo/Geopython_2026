@@ -41,3 +41,7 @@ Thumbs.db
 # Credenciales GEE
 credentials
 service_account_key.json
+
+# Soluciones (no subir al repo público)
+*solutions*.ipynb
+*soluciones*.ipynb
