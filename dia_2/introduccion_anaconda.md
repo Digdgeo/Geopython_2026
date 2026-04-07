@@ -149,7 +149,36 @@ conda remove shapely
 conda list
 ```
 
-> **Nota:** cuando conda no tiene un paquete, puedes usar `pip install` dentro del entorno activo. En el `environment.yml` del curso verás los dos métodos combinados.
+---
+
+## conda vs pip dentro de un entorno conda
+
+Dentro de un entorno conda puedes usar tanto `conda install` como `pip install`. Ambos instalan paquetes en el entorno activo, pero funcionan de forma muy diferente.
+
+### Resolución de dependencias
+
+- **conda** resuelve dependencias a nivel de sistema también: librerías C, GDAL, PROJ, GEOS... Cuando instalas `geopandas` con conda, te instala automáticamente GDAL compilado y todo lo que necesita.
+- **pip** solo resuelve dependencias Python. Si un paquete necesita una librería C externa, asume que ya está en el sistema.
+
+Esto es crítico en geoespacial: instalar `rasterio` o `fiona` con pip en Windows o macOS suele dar problemas porque necesitan GDAL compilado. Con conda simplemente funciona.
+
+### Conocimiento mutuo
+
+- **conda sabe lo que instaló pip**, pero no al revés. Si mezclas los dos, pip puede romper dependencias que conda había resuelto sin que conda se entere.
+- Por eso en el `environment.yml` el orden importa: primero todo lo que venga de conda, y al final el bloque `pip:` solo para lo que no esté en ningún canal conda.
+
+### Cuándo usar cada uno
+
+| Situación | Usa |
+|---|---|
+| Paquete disponible en conda-forge | `conda install -c conda-forge paquete` |
+| Librerías geoespaciales (GDAL, rasterio, fiona...) | Siempre conda |
+| Paquete solo en PyPI | `pip install paquete` |
+| Paquetes muy nuevos o experimentales | pip (suelen llegar antes a PyPI) |
+
+### Regla práctica
+
+Usa conda siempre que puedas, y pip solo como último recurso para lo que no esté en conda-forge. Nunca mezcles los dos para el mismo paquete.
 
 ---
 
