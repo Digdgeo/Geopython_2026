@@ -169,9 +169,12 @@ dependencies:
   - numpy>=1.26
   - pandas>=2.0
   - geopandas>=1.0
-  - pip:
-      - geemap        # paquetes solo disponibles en pip
+  - geemap
+  - ndvi2gif
+  - earthengine-api
 ```
+
+El bloque `pip:` solo es necesario para paquetes que no están en conda-forge. En este curso todo está disponible en conda-forge, por lo que no hace falta.
 
 ### Crear el entorno del curso
 

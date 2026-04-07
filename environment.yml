@@ -24,8 +24,6 @@ dependencies:
   - mapclassify
   - osmnx>=1.9
   - networkx
-  - pip
-  - pip:
-    - geemap
-    - earthengine-api
-    - ndvi2gif
+  - geemap
+  - ndvi2gif
+  - earthengine-api
