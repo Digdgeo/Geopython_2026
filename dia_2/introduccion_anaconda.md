@@ -236,15 +236,46 @@ conda env export --from-history > environment.yml
 
 ## Usar el entorno con Jupyter
 
-Para que Jupyter reconozca el entorno como kernel disponible:
+Cuando lanzas JupyterLab, los notebooks necesitan un **kernel** — el proceso Python que ejecuta el código. Por defecto, Jupyter usa el kernel del entorno desde el que se lanza, que normalmente es `base`. Para que tus entornos conda aparezcan como kernels disponibles hay dos formas:
+
+### Opción 1 — `nb_conda_kernels` (recomendada)
+
+Instala `nb_conda_kernels` en el entorno **base** una sola vez:
+
+```bash
+conda activate base
+conda install -c conda-forge nb_conda_kernels
+```
+
+A partir de ahí, **cualquier entorno** que tenga `ipykernel` instalado aparecerá automáticamente como kernel disponible en JupyterLab, sin tener que hacer nada más. Es la opción más cómoda si trabajas con varios entornos.
+
+### Opción 2 — Registrar manualmente el entorno
+
+Desde el entorno que quieres registrar:
 
 ```bash
 conda activate geopython2026
 python -m ipykernel install --user --name geopython2026 --display-name "Python (geopython2026)"
-jupyter lab
 ```
 
-En JupyterLab verás el kernel `Python (geopython2026)` disponible al crear o abrir un notebook.
+Esto registra ese entorno concreto como kernel disponible para el usuario. Es útil si solo necesitas un entorno adicional o si no quieres instalar nada en `base`.
+
+### ¿Cuál usar?
+
+| | `nb_conda_kernels` | Registro manual |
+|---|---|---|
+| Instalación | Una vez en `base` | Una vez por entorno |
+| Nuevos entornos | Aparecen solos | Hay que registrarlos |
+| Modifica `base` | Sí (mínimamente) | No |
+
+> **Importante:** el kernel seleccionado en el notebook (esquina superior derecha) es lo que determina qué librerías están disponibles, independientemente de desde qué entorno hayas lanzado JupyterLab. Asegúrate siempre de tener seleccionado el kernel correcto.
+
+Para lanzar JupyterLab:
+
+```bash
+conda activate geopython2026
+jupyter lab
+```
 
 ---
 
