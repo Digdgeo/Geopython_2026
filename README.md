@@ -1,7 +1,7 @@
 # GeoPython 2026
 
 > **Análisis Espacial con Python** · Gabinete de Formación del CSIC  
-> Estación Biológica de Doñana, Sevilla · 7–11 abril 2026
+> Estación Biológica de Doñana, Sevilla · 6–10 abril 2026
 
 ![](https://i.imgur.com/fOMDouZ.png)
 
@@ -98,7 +98,7 @@ GDAL/OGR  →  Fiona · Shapely  →  GeoPandas
 
 ### Día 4 — Stack raster: NumPy y Rasterio
 
-*Próxima sesión — jueves 10 de abril*
+*Próxima sesión — jueves 9 de abril*
 
 El mismo concepto aplicado al mundo raster:
 
@@ -116,7 +116,7 @@ GDAL  →  NumPy  →  Rasterio
 
 ### Día 5 — Google Earth Engine: Geemap y ndvi2gif
 
-*Viernes 11 de abril*
+*Viernes 10 de abril*
 
 Cerramos el curso con acceso a la nube desde Python. Google Earth Engine como plataforma de computación geoespacial masiva, con Geemap como interfaz interactiva y ndvi2gif para series temporales de índices espectrales.
 
