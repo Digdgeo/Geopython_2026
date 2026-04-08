@@ -1,72 +1,156 @@
 # GeoPython 2026
 
-Repositorio para el contenido del curso de **Análisis Espacial con Python** (GeoPython 2026).
+> **Análisis Espacial con Python** · Gabinete de Formación del CSIC  
+> Estación Biológica de Doñana, Sevilla · 7–11 abril 2026
 
-## Descripción
+![](https://i.imgur.com/fOMDouZ.png)
 
-Curso de 30 horas centrado en el ecosistema de librerías Python para análisis espacial. Una de las ideas centrales del curso es entender cómo se construyen las librerías unas sobre otras: desde GDAL/OGR y Shapely hasta GeoPandas y Rasterio, pasando por Google Earth Engine con Geemap y análisis de redes con OSMnx.
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)](https://jupyter.org/)
+[![Conda](https://img.shields.io/badge/Conda-Anaconda-44A833?logo=anaconda&logoColor=white)](https://docs.conda.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Los notebooks están disponibles en dos versiones:
-- `*_complete.ipynb` — notebook completo con todo el código
-- `*_exercises.ipynb` — notebook con ejercicios para resolver durante el curso
+---
+
+## Grabaciones de las sesiones
+
+| Día | Contenido | Enlace |
+|-----|-----------|--------|
+| Día 1 | Intro Google Colab + Introducción a Python | [Ver grabación](https://balanbbb.corp.csic.es/playback/presentation/2.3/49d59d607ccc44671d0e0ada701426dd6a2dcfd4-1775458392383) |
+| Día 2 | Clases en Python · Pandas · Stack vectorial | [Ver grabación](https://balanbbb.corp.csic.es/playback/presentation/2.3/49d59d607ccc44671d0e0ada701426dd6a2dcfd4-1775545152074) |
+
+---
 
 ## Entorno de trabajo
 
-El curso es **mixto**: algunos módulos se ejecutan en local y otros en Google Colab. Cada notebook indica al inicio qué entorno se recomienda.
+El curso es **mixto**: los dos primeros días trabajamos en Google Colab; a partir del Día 3 pasamos al entorno local con Anaconda.
 
-### Entorno local (conda)
+### Días 1–2 — Google Colab
+
+Accede en [colab.research.google.com](https://colab.research.google.com). Los notebooks incluyen una celda inicial con las instalaciones necesarias (`!pip install ...`).
+
+### Días 3–5 — Entorno local (conda)
 
 ```bash
 conda env create -f environment.yml
 conda activate geopython2026
 ```
 
-### Google Colab
-
-Los notebooks de Colab incluyen una celda inicial con las instalaciones necesarias (`!pip install ...`).
+---
 
 ## Temario
 
-### Día 1 — Introducción a Python
-`notebooks/dia_1/`
+### Día 1 — Introducción a Google Colab y a Python
 
-Entorno Jupyter (local y Colab), tipos de datos, estructuras de control, funciones, manejo de errores, módulos y Programación Orientada a Objetos (clases y herencia). Ejercicio final: Rock, Paper, Scissors, Lizard, Spock.
+[![Notebook completo](https://img.shields.io/badge/Notebook-completo-blue?logo=jupyter)](https://github.com/Digdgeo/Geopython_2026/blob/main/dia_1/notebooks/01_intro_python_complete.ipynb)
+[![Ejercicios](https://img.shields.io/badge/Notebook-ejercicios-orange?logo=jupyter)](https://github.com/Digdgeo/Geopython_2026/blob/main/dia_1/notebooks/01_intro_python_exercises.ipynb)
 
-### Día 2 — La pila vectorial: Shapely → Fiona → GeoPandas
-`notebooks/dia_2/`
+Primer contacto con Jupyter en Google Colab. Introducción a Python: tipos de datos, estructuras de control y funciones. Como ejercicio de cierre, el clásico **Rock, Paper, Scissors, Lizard, Spock** popularizado por The Big Bang Theory.
 
-Cómo se construyen las librerías vectoriales unas sobre otras. Shapely para geometrías y operaciones espaciales. Fiona para I/O vectorial sobre GDAL/OGR. GeoPandas para análisis vectorial de alto nivel: proyecciones, operaciones espaciales, joins atributales y espaciales, visualización.
+- Google Colab: entorno, atajos, integración con Drive
+- Variables, strings, numbers, booleans
+- Listas, tuplas, sets, diccionarios
+- Bucles `for` / `while` y condicionales
+- Manejo de errores (`try` / `except`)
+- Funciones y módulos
 
-### Día 3 — La pila raster: GDAL → NumPy → Rasterio
-`notebooks/dia_3/`
+![](dia_1/grafico_RSCPS.png)
 
-De GDAL (la base C/C++) a Rasterio (API Pythónica sobre GDAL). NumPy para operaciones matriciales. Lectura/escritura de rasters, metadatos, reproyección, clips, enmascarado, álgebra de mapas, point sampling y estadísticas zonales.
+---
 
-### Día 4 — Teledetección aplicada: clase Landsat y ndvi2gif
-`notebooks/dia_4/`
+### Día 2 — Clases en Python y Pandas
 
-Construcción de una clase Python para trabajar con imágenes Landsat. Composites estacionales y multíndice con ndvi2gif. Análisis de series temporales de reflectividad.
+[![Clases Python](https://img.shields.io/badge/Notebook-clases-blue?logo=jupyter)](https://github.com/Digdgeo/Geopython_2026/blob/main/dia_1/notebooks/01b_python_classes.ipynb)
+[![Pandas](https://img.shields.io/badge/Notebook-pandas-blue?logo=jupyter)](https://github.com/Digdgeo/Geopython_2026/blob/main/dia_1/notebooks/01c_pandas_dataframes.ipynb)
 
-### Día 5 — Google Earth Engine, Geemap y OSMnx
-`notebooks/dia_5/`
+Terminamos los temas pendientes de Python (módulos, manejo de errores, clases) y damos el salto a **Pandas**, la librería de referencia para datos tabulares. Introducción a la Programación Orientada a Objetos con herencia.
 
-Introducción a GEE desde Python. Geemap como interfaz interactiva: composites estacionales, visualización y exportación. Análisis de redes viales con OSMnx: descarga de grafos, rutas óptimas e isocronas.
+- Clases en Python: `__init__`, métodos, atributos
+- Herencia y polimorfismo
+- Pandas: Series y DataFrames
+- Lectura de CSV/Excel, indexado y filtrado
+- Operaciones, agrupaciones y visualización básica
 
-## Datos
+![](https://i.imgur.com/mcWcZYY.png)
 
-Los datos de ejemplo están en `data/` e incluyen capas vectoriales de Canarias, Tenerife y el entorno de Doñana (shapefiles, GeoPackage, GeoJSON).
+---
+
+### Día 3 — Entorno Anaconda y stack vectorial
+
+[![Anaconda](https://img.shields.io/badge/Guía-Anaconda-44A833?logo=anaconda)](https://github.com/Digdgeo/Geopython_2026/blob/main/dia_2/introduccion_anaconda.md)
+[![Vectorial completo](https://img.shields.io/badge/Notebook-completo-blue?logo=jupyter)](https://github.com/Digdgeo/Geopython_2026/blob/main/dia_2/notebooks/02_shapely_fiona_geopandas_complete.ipynb)
+[![Ejercicios](https://img.shields.io/badge/Notebook-ejercicios-orange?logo=jupyter)](https://github.com/Digdgeo/Geopython_2026/blob/main/dia_2/notebooks/02_shapely_fiona_geopandas_exercises.ipynb)
+
+Pasamos al entorno local con Anaconda y arrancamos con el análisis vectorial. La clave del día es entender cómo se construyen las librerías unas sobre otras:
+
+```
+GDAL/OGR  →  Fiona · Shapely  →  GeoPandas
+```
+
+- Anaconda: conda vs pip, entornos virtuales, `environment.yml`
+- **Shapely**: geometrías, predicados y operaciones espaciales en memoria
+- **Fiona**: I/O vectorial sobre GDAL/OGR, control fino del schema
+- **GeoPandas**: análisis vectorial de alto nivel, CRS, spatial joins, overlay y visualización
+
+![](https://i.imgur.com/fOMDouZ.png)
+
+---
+
+### Día 4 — Stack raster: NumPy y Rasterio
+
+*Próxima sesión — jueves 10 de abril*
+
+El mismo concepto aplicado al mundo raster:
+
+```
+GDAL  →  NumPy  →  Rasterio
+```
+
+- **GDAL** desde Python: drivers, metadatos, reproyección
+- **NumPy**: arrays multidimensionales y álgebra de mapas
+- **Rasterio**: lectura/escritura de rasters, clips, enmascarado, point sampling y estadísticas zonales
+
+![](https://i.imgur.com/ZvGb8Cc.png)
+
+---
+
+### Día 5 — Google Earth Engine: Geemap y ndvi2gif
+
+*Viernes 11 de abril*
+
+Cerramos el curso con acceso a la nube desde Python. Google Earth Engine como plataforma de computación geoespacial masiva, con Geemap como interfaz interactiva y ndvi2gif para series temporales de índices espectrales.
+
+- **Google Earth Engine**: autenticación, colecciones de imágenes, filtros
+- **Geemap**: mapas interactivos, composites estacionales, exportación
+- **ndvi2gif**: composites multíndice y GIFs de series temporales
+- **OSMnx**: redes viales, rutas óptimas e isocronas *(si da tiempo)*
+
+![](https://i.imgur.com/Vwt3r1r.png)
+
+---
 
 ## Librerías principales
 
 | Librería | Versión mínima | Uso |
 |----------|---------------|-----|
 | geopandas | 1.0 | Análisis vectorial |
-| shapely | 2.0 | Geometrías |
-| fiona | 1.9 | I/O vectorial |
+| shapely | 2.0 | Geometrías y operaciones espaciales |
+| fiona | 1.9 | I/O vectorial (sobre GDAL/OGR) |
 | rasterio | 1.3 | Análisis raster |
-| numpy | 1.26 | Arrays |
+| numpy | 1.26 | Arrays y álgebra de mapas |
+| pandas | 2.0 | Datos tabulares |
 | matplotlib | 3.8 | Visualización |
-| geemap | 0.30 | Google Earth Engine |
+| geemap | 0.30 | Google Earth Engine interactivo |
 | osmnx | 1.9 | Redes viales |
-| ndvi2gif | 1.1.0 | Composites estacionales (múltiples índices espectrales) |
+| ndvi2gif | 1.1.0 | Composites estacionales y series temporales |
 | jupyter | — | Entorno de trabajo |
+
+---
+
+## Datos
+
+Los datos de ejemplo están en `data/` e incluyen capas vectoriales de Canarias, Tenerife y el entorno de Doñana (shapefiles, GeoPackage, GeoJSON).
+
+---
+
+*GeoPython 2026 · CSIC / Estación Biológica de Doñana*
