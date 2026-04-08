@@ -3,7 +3,7 @@
 > **Análisis Espacial con Python** · Gabinete de Formación del CSIC  
 > Estación Biológica de Doñana, Sevilla · 6–10 abril 2026
 
-![](https://i.imgur.com/fOMDouZ.png)
+![](img/canary.png)
 
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)](https://jupyter.org/)
