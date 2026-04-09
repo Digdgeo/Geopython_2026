@@ -18,6 +18,7 @@
 |-----|-----------|--------|
 | Día 1 | Intro Google Colab + Introducción a Python | [Ver grabación](https://balanbbb.corp.csic.es/playback/presentation/2.3/49d59d607ccc44671d0e0ada701426dd6a2dcfd4-1775458392383) |
 | Día 2 | Clases en Python · Pandas · Stack vectorial | [Ver grabación](https://balanbbb.corp.csic.es/playback/presentation/2.3/49d59d607ccc44671d0e0ada701426dd6a2dcfd4-1775545152074) |
+| Día 3 | Entorno Anaconda · Stack vectorial | [Ver grabación](https://balanbbb.corp.csic.es/playback/presentation/2.3/49d59d607ccc44671d0e0ada701426dd6a2dcfd4-1775631555977) |
 
 ---
 
@@ -98,7 +99,7 @@ GDAL/OGR  →  Fiona · Shapely  →  GeoPandas
 
 ### Día 4 — Stack raster: NumPy y Rasterio
 
-*Próxima sesión — jueves 9 de abril*
+> **Datos de la sesión:** [Descargar datos](https://saco.csic.es/s/7fwsC5oXLtRwtMe)
 
 El mismo concepto aplicado al mundo raster:
 
