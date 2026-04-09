@@ -94,13 +94,13 @@ GDAL/OGR  →  Fiona · Shapely  →  GeoPandas
 - **Fiona**: I/O vectorial sobre GDAL/OGR, control fino del schema
 - **GeoPandas**: análisis vectorial de alto nivel, CRS, spatial joins, overlay y visualización
 
-![](https://i.imgur.com/fOMDouZ.png)
+![](img/fincas__.png)
 
 ---
 
 ### Día 4 — Nubes de puntos LiDAR y stack raster
 
-> **Datos de la sesión:** [Descargar datos LiDAR](https://saco.csic.es/s/7fwsC5oXLtRwtMe) · [Descargar imagen Landsat](https://saco.csic.es/s/tmKZqPiDdiSYyxe)
+> **Datos de la sesión:** [Descargar datos LiDAR](https://saco.csic.es/s/7fwsC5oXLtRwtMe)
 
 Trabajamos con nubes de puntos LAZ del PNOA y con los rasters derivados de Canopy Height. El mismo esquema de capas aplicado al mundo raster:
 
@@ -121,6 +121,8 @@ GDAL  →  NumPy  →  Rasterio
 ### Día 5 — Google Earth Engine: Clase Landsat, Geemap y ndvi2gif
 
 *Viernes 10 de abril*
+
+> **Datos de la sesión:** [Descargar imagen Landsat](https://saco.csic.es/s/tmKZqPiDdiSYyxe)
 
 Cerramos el curso con acceso a la nube desde Python. Creamos una clase `Landsat` para encapsular la lógica de descarga y procesado, y exploramos Google Earth Engine como plataforma de computación geoespacial masiva.
 
