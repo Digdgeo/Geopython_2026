@@ -128,7 +128,7 @@ Cerramos el curso con acceso a imágenes de satélite desde Python. Creamos una 
 
 - **Clase Landsat**: POO aplicada al procesado de imágenes de satélite
 - **Geemap**: mapas interactivos, composites estacionales, exportación
-- **ndvi2gif**: composites multíndice y GIFs de series temporales
+- **ndvi2gif**: compuestos estacionales basados en estadísticas sobre índices de teledetección, clasificación y análisis fenológico
 
 ![](https://i.imgur.com/Vwt3r1r.png)
 
@@ -147,7 +147,7 @@ Cerramos el curso con acceso a imágenes de satélite desde Python. Creamos una 
 | matplotlib | 3.8 | Visualización |
 | geemap | 0.30 | Google Earth Engine interactivo |
 | osmnx | 1.9 | Redes viales |
-| ndvi2gif | 1.1.0 | Composites estacionales y series temporales |
+| ndvi2gif | 1.1.0 | Compuestos estacionales, clasificación y análisis fenológico |
 | jupyter | — | Entorno de trabajo |
 
 ---
