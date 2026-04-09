@@ -42,7 +42,7 @@ conda activate geopython2026
 
 ## Temario
 
-### Día 1 — Introducción a Google Colab y a Python
+### Día 1 — Introducción a Python
 
 [![Notebook completo](https://img.shields.io/badge/Notebook-completo-blue?logo=jupyter)](https://github.com/Digdgeo/Geopython_2026/blob/main/dia_1/notebooks/01_intro_python_complete.ipynb)
 [![Ejercicios](https://img.shields.io/badge/Notebook-ejercicios-orange?logo=jupyter)](https://github.com/Digdgeo/Geopython_2026/blob/main/dia_1/notebooks/01_intro_python_exercises.ipynb)
@@ -65,7 +65,7 @@ Primer contacto con Jupyter en Google Colab. Introducción a Python: tipos de da
 [![Clases Python](https://img.shields.io/badge/Notebook-clases-blue?logo=jupyter)](https://github.com/Digdgeo/Geopython_2026/blob/main/dia_1/notebooks/01b_python_classes.ipynb)
 [![Pandas](https://img.shields.io/badge/Notebook-pandas-blue?logo=jupyter)](https://github.com/Digdgeo/Geopython_2026/blob/main/dia_1/notebooks/01c_pandas_dataframes.ipynb)
 
-Terminamos los temas pendientes de Python (módulos, manejo de errores, clases) y damos el salto a **Pandas**, la librería de referencia para datos tabulares. Introducción a la Programación Orientada a Objetos con herencia.
+Terminamos los temas pendientes de Python y damos el salto a **Pandas**, la librería de referencia para datos tabulares. Introducción a la Programación Orientada a Objetos con herencia.
 
 - Clases en Python: `__init__`, métodos, atributos
 - Herencia y polimorfismo
@@ -77,7 +77,7 @@ Terminamos los temas pendientes de Python (módulos, manejo de errores, clases) 
 
 ---
 
-### Día 3 — Entorno Anaconda y stack vectorial
+### Día 3 — Entorno Anaconda y análisis vectorial
 
 [![Anaconda](https://img.shields.io/badge/Guía-Anaconda-44A833?logo=anaconda)](https://github.com/Digdgeo/Geopython_2026/blob/main/dia_2/introduccion_anaconda.md)
 [![Vectorial completo](https://img.shields.io/badge/Notebook-completo-blue?logo=jupyter)](https://github.com/Digdgeo/Geopython_2026/blob/main/dia_2/notebooks/02_shapely_fiona_geopandas_complete.ipynb)
@@ -98,34 +98,36 @@ GDAL/OGR  →  Fiona · Shapely  →  GeoPandas
 
 ---
 
-### Día 4 — Stack raster: NumPy y Rasterio
+### Día 4 — Nubes de puntos LiDAR y stack raster
 
 > **Datos de la sesión:** [Descargar datos LiDAR](https://saco.csic.es/s/7fwsC5oXLtRwtMe) · [Descargar imagen Landsat](https://saco.csic.es/s/tmKZqPiDdiSYyxe)
 
-El mismo concepto aplicado al mundo raster:
+Trabajamos con nubes de puntos LAZ del PNOA y con los rasters derivados de Canopy Height. El mismo esquema de capas aplicado al mundo raster:
 
 ```
 GDAL  →  NumPy  →  Rasterio
 ```
 
+- **LiDAR / LAZ**: lectura de nubes de puntos del PNOA con `laspy`, visualización y filtrado por clase de retorno
+- **Canopy Height**: generación de modelos de altura de vegetación a partir de MDS y MDT
 - **GDAL** desde Python: drivers, metadatos, reproyección
 - **NumPy**: arrays multidimensionales y álgebra de mapas
-- **Rasterio**: lectura/escritura de rasters, clips, enmascarado, point sampling y estadísticas zonales
+- **Rasterio**: lectura/escritura de rasters, clips, enmascarado, estadísticas zonales y reclasificación
 
-![](https://i.imgur.com/ZvGb8Cc.png)
+![](img/las_img.png)
 
 ---
 
-### Día 5 — Google Earth Engine: Geemap y ndvi2gif
+### Día 5 — Google Earth Engine: Clase Landsat, Geemap y ndvi2gif
 
 *Viernes 10 de abril*
 
-Cerramos el curso con acceso a la nube desde Python. Google Earth Engine como plataforma de computación geoespacial masiva, con Geemap como interfaz interactiva y ndvi2gif para series temporales de índices espectrales.
+Cerramos el curso con acceso a la nube desde Python. Creamos una clase `Landsat` para encapsular la lógica de descarga y procesado, y exploramos Google Earth Engine como plataforma de computación geoespacial masiva.
 
+- **Clase Landsat**: POO aplicada al procesado de imágenes de satélite
 - **Google Earth Engine**: autenticación, colecciones de imágenes, filtros
 - **Geemap**: mapas interactivos, composites estacionales, exportación
 - **ndvi2gif**: composites multíndice y GIFs de series temporales
-- **OSMnx**: redes viales, rutas óptimas e isocronas *(si da tiempo)*
 
 ![](https://i.imgur.com/Vwt3r1r.png)
 
