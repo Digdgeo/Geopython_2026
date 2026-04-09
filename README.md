@@ -118,16 +118,15 @@ GDAL  →  NumPy  →  Rasterio
 
 ---
 
-### Día 5 — Google Earth Engine: Clase Landsat, Geemap y ndvi2gif
+### Día 5 — Clase Landsat, Geemap y ndvi2gif
 
 *Viernes 10 de abril*
 
 > **Datos de la sesión:** [Descargar imagen Landsat](https://saco.csic.es/s/tmKZqPiDdiSYyxe)
 
-Cerramos el curso con acceso a la nube desde Python. Creamos una clase `Landsat` para encapsular la lógica de descarga y procesado, y exploramos Google Earth Engine como plataforma de computación geoespacial masiva.
+Cerramos el curso con acceso a imágenes de satélite desde Python. Creamos una clase `Landsat` para encapsular la lógica de descarga y procesado, y exploramos Geemap como interfaz interactiva para análisis espacial en la nube.
 
 - **Clase Landsat**: POO aplicada al procesado de imágenes de satélite
-- **Google Earth Engine**: autenticación, colecciones de imágenes, filtros
 - **Geemap**: mapas interactivos, composites estacionales, exportación
 - **ndvi2gif**: composites multíndice y GIFs de series temporales
 
