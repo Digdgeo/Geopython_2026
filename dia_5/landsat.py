@@ -171,6 +171,13 @@ class Landsat:
 
         return self._save_index(index, profile, f'{self.scene_name}_mndwi.tif')
 
+    def run(self):
+        """Calcula y guarda todos los índices espectrales (NDVI y MNDWI)."""
+        print(f"Procesando escena: {self.scene_name}")
+        self.ndvi()
+        self.mndwi()
+        print("Procesamiento completado.")
+
     # ----------------------------------------------------------------------
     # Representación
     # ----------------------------------------------------------------------
