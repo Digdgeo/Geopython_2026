@@ -5,8 +5,6 @@
 
 [![Ver presentación del curso](https://i.imgur.com/mmIjQjA.png)](https://slides.com/diegogarciadiaz/aepython/fullscreen)
 
-![](img/canary.png)
-
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)](https://jupyter.org/)
 [![Conda](https://img.shields.io/badge/Conda-Anaconda-44A833?logo=anaconda&logoColor=white)](https://docs.conda.io/)
