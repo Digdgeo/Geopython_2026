@@ -3,6 +3,8 @@
 > **Análisis Espacial con Python** · Gabinete de Formación del CSIC  
 > Estación Biológica de Doñana, Sevilla · 6–10 abril 2026
 
+[![Ver presentación del curso](https://i.imgur.com/mmIjQjA.png)](https://slides.com/diegogarciadiaz/aepython/fullscreen)
+
 ![](img/canary.png)
 
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
@@ -20,6 +22,7 @@
 | Día 2 | Clases en Python · Pandas · Stack vectorial | [Ver grabación](https://balanbbb.corp.csic.es/playback/presentation/2.3/49d59d607ccc44671d0e0ada701426dd6a2dcfd4-1775545152074) |
 | Día 3 | Entorno Anaconda · Stack vectorial | [Ver grabación](https://balanbbb.corp.csic.es/playback/presentation/2.3/49d59d607ccc44671d0e0ada701426dd6a2dcfd4-1775631555977) |
 | Día 4 | Stack raster: NumPy y Rasterio | [Ver grabación](https://balanbbb.corp.csic.es/playback/presentation/2.3/49d59d607ccc44671d0e0ada701426dd6a2dcfd4-1775717939412) |
+| Día 5 | Clase Landsat · Geemap · ndvi2gif | [Ver grabación](https://balanbbb.corp.csic.es/playback/presentation/2.3/49d59d607ccc44671d0e0ada701426dd6a2dcfd4-1775804390520) |
 
 ---
 
